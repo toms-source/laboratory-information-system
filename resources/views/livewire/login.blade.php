@@ -10,11 +10,19 @@
       </ul>
    </nav>
 
-   <section id="login">
-      <div></div>
+   <section id="login" class="w-full grid grid-cols-2">
       <div>
-         <div>SIGN IN</div>
+         <h2 class="font-sans text-5xl font-bold">
+            <div class="text-sky-500">B&D</div>
+            Laboratories
+         </h2>
+      </div>
+      
+      <img src='/resources/img/undraw_scientist_ft0o.svg' alt="">
+      <div>
+         
          <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div>SIGN IN</div>
             <div class="mb-4">
                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                Username

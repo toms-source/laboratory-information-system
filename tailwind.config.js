@@ -6,7 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                landing: "url('/resources/img/undraw_scientist_ft0o.svg')",
+            },
+        },
     },
     plugins: [],
 };
