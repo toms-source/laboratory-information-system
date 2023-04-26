@@ -20,27 +20,41 @@
       
      <div class='p-20'>
       <div class='my-10'>
-         <form class="border mt-15 bg-white shadow-md rounded" action="">
+         <form class="border mt-15 bg-white shadow-md rounded" wire:submit.prevent="login">
             <div class="text-center text-2xl pb-10 my-8 text-sky-500 font-bold">SIGN IN</div>
+
+            @if (session()->has('success'))
+               <div class="border rounded p-5 border-green-400" role="alert">
+                  {{ session('success') }}
+               </div>
+            @endif
+
+            @if (session()->has('danger'))
+               <div class="border rounded p-5 border-red-400" role="alert">
+                  {{ session('danger') }}
+               </div>
+            @endif
 
             <div class="m-5">
                   <label class="block text-gray-700 text-m font-bold mb-2" for="email">
-                  Email
+                     Email
                   </label>
-                  <input class="shadow appearance-none rounded-lg border  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email">
+                  <input class="shadow appearance-none rounded-lg border  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email"
+                  wire:model.debounce.500ms="email">
             </div>
             <div class="m-5">
                   <label class="block text-gray-700 text-m font-bold mb-2" for="password">
                   Password
                   </label>
-                  <input class="shadow appearance-none rounded-lg border sm:text-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="password">
+                  <input class="shadow appearance-none rounded-lg border sm:text-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="password"
+                  wire:model.debounce.500ms="password">
             </div>
             <div class="button flex items-center justify-center gap-10 px-10">
                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">GOOGLE LOGIN</button>
                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-14 rounded">LOGIN</button>
             </div>
             <a class="py-5 block font-bold text-sm text-blue-500 hover:text-blue-800 text-center" href="/register" wire:click="register()">
-            REGISTER HERE
+               REGISTER HERE
             </a>
          </form>
       </div>
