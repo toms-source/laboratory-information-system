@@ -39,7 +39,7 @@
                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">GOOGLE LOGIN</button>
                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-14 rounded">LOGIN</button>
             </div>
-            <a class="py-5 block font-bold text-sm text-blue-500 hover:text-blue-800 text-center" href="#" wire:click="register()">
+            <a class="py-5 block font-bold text-sm text-blue-500 hover:text-blue-800 text-center" href="/register" wire:click="register()">
             REGISTER HERE
             </a>
          </form>
