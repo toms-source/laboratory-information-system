@@ -1,11 +1,4 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
-html {
-    background-color: #f9f9f9;
-}
->>>>>>> 8ef7b385a3da2548f77a312f56632a1efd1bb07c
