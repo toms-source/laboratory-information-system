@@ -20,6 +20,7 @@
    </head>
    <body class="antialiased">
 
+      
       @yield('content')
 
       @vite(['resources/js/app.js'])

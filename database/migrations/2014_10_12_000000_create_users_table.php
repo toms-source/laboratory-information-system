@@ -16,7 +16,16 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->enum('role', ['admin', 'client'])->default('client');
+
+            //Personal Information
+            $table->string('contact');
+            $table->string('address');
+
+            //add below if there is new information to add
+            //the rest should be nullable
+
             $table->rememberToken();
             $table->timestamps();
         });
