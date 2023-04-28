@@ -31,6 +31,6 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.client.index')->extends('layouts.app');
+        return view('livewire.client.index')->extend('layouts.app');
     }
 }
