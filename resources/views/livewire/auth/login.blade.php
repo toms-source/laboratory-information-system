@@ -4,7 +4,7 @@
    <div class="m-5">
       @if (session()->has('danger'))
          <div wire:poll.3s="hide" class="border rounded p-5 bg-red-200 border-red-200" role="alert">
-            {{ session('danger') }}
+            {{ session('danger')}}
          </div>
       @endif
    </div>
