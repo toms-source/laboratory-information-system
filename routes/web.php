@@ -29,6 +29,7 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
    });
 });
 
+
 //provider, example github, google, facebook, etc.
 Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
 Route::get('/auth/{provider}/callback',[ProviderController::class, 'callback']);
