@@ -12,6 +12,11 @@ class Dashboard extends Component
         return redirect()->route('index');
     }
 
+    public function hide()
+    {
+        session()->forget('info');
+    }
+
     public function render()
     {
         return view('livewire.client.dashboard.dashboard')->extends('layouts.client')->section('content');
