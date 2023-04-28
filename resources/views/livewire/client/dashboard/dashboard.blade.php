@@ -1,10 +1,9 @@
-<div>
+{{-- <div>
     <button class="p-5 bg-red-600" wire:click="logout">
         Logout
     </button>
-</div>
-
-{{-- 
+</div> --}}
+ 
 <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
@@ -104,4 +103,3 @@
       </div>
     </div>
   </nav>
-   --}}
