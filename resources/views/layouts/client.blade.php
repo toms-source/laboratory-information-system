@@ -93,12 +93,10 @@
            </div>
            
          </div>
-               @auth
-                   @if(Auth::user()->role == 'client')
-                       <button href="{{ route('index') }}" class="ms-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Client</button>
-                   @endif
-               @endauth
-               <button wire:click="logout()" class="ms-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</button>
+            <a href="/" class="ms-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Client</a>
+                   
+               <livewire:auth.logout-button />
+                   
        </div>
      </div>
    </div>
