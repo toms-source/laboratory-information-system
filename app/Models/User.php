@@ -24,6 +24,11 @@ class User extends Authenticatable
         'password',
         'address',
         'contact',
+
+        //Loraine-Add
+        'provider',
+        'provider_id',
+        'provider_token',
     ];
 
     /**

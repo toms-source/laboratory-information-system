@@ -19,9 +19,15 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->enum('role', ['admin', 'client'])->default('client');
 
+            //Loraine-Add-For-Socialitee
+            $table->string('provider')->nullable();
+            $table->string('provider_id')->nullable();
+            $table->string('provider_token')->nullable();
+
             //Personal Information
-            $table->string('contact');
-            $table->string('address');
+            //Loraine-add: nullable(), providers doesn't have these two
+            $table->string('contact')->nullable(); 
+            $table->string('address')->nullable();
 
             //add below if there is new information to add
             //the rest should be nullable

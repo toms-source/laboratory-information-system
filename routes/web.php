@@ -3,6 +3,7 @@
 use App\Http\Livewire\Client\Dashboard\Dashboard;
 use App\Http\Livewire\Client\Index;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\ProviderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +28,7 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
       //Route:get('endpoint', Classname::class)->name('route.name');
    });
 });
+
+//provider, example github, google, facebook, etc.
+Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
+Route::get('/auth/{provider}/callback',[ProviderController::class, 'callback']);

@@ -1,5 +1,5 @@
 <form class="border mt-15 bg-white shadow-md rounded" wire:submit.prevent="register">
-    <div class="text-center text-2xl pb-10 my-8 text-sky-500 font-bold">REGISTER</div>
+    <div class="text-center text-2xl pb-2 my-8 text-sky-500 font-bold">CREATE ACCOUNT</div>
 
     <!-- Name -->
     <div class="m-5">
@@ -99,18 +99,18 @@
             @enderror
     </div>
     <div class="button flex items-center justify-center gap-10 px-10">
-        <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><span><i class="fa-brands fa-google"></i></span> GOOGLE LOGIN
-        </a>
+       <!-- <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><span><i class="fa-brands fa-google"></i></span> GOOGLE LOGIN
+        </a> -->
         <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded">
+            class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded">
             REGISTER
         </button>
     </div>
 
 
     <div class="py-5 block text-center">
-        <button class="font-bold text-sm text-blue-500 hover:text-blue-800" wire:click.prevent="switchToLogin">
-            LOGIN HERE
+     Already have an account?   <button class="font-semibold text-md text-blue-500 hover:text-blue-800" wire:click.prevent="switchToLogin">
+            Log In
         </button>
     </div>
 </form>
