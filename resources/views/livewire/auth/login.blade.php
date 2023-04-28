@@ -1,5 +1,5 @@
-<form class="border mt-15 bg-white shadow-md rounded" wire:submit.prevent="login">
-   <div class="text-center text-2xl pb-2 my-8 text-sky-500 font-bold">SIGN IN</div>
+<form class="border bg-white shadow-md rounded" wire:submit.prevent="login">
+   <div class="text-center text-2xl pb-2 my-8 text-sky-500 font-semibold">Sign in</div>
 
    <div class="m-5">
       @if (session()->has('danger'))

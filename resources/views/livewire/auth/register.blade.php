@@ -1,5 +1,5 @@
 <form class="border mt-15 bg-white shadow-md rounded" wire:submit.prevent="register">
-    <div class="text-center text-2xl pb-2 my-8 text-sky-500 font-bold">CREATE ACCOUNT</div>
+    <div class="text-center text-2xl pb-2 my-8 text-sky-500 font-semibold">Create Account</div>
 
     <!-- Name -->
     <div class="m-5">
