@@ -1,7 +1,8 @@
 {{-- <div>
     <button class="p-5 bg-red-600" wire:click="logout">
-        Logout
+        Dashboard
     </button>
+<<<<<<< HEAD
 </div> --}}
  
 <nav class="bg-gray-800">
@@ -103,3 +104,7 @@
       </div>
     </div>
   </nav>
+=======
+</div>
+
+>>>>>>> e48d57eef519a28d2f1703a5a15526a45fbc3bcc
