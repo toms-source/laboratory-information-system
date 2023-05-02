@@ -37,6 +37,10 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
    });
 });
 
+
+
+
+
 Route::prefix('admin')->middleware(['auth'])->group(function () {
    Route::prefix('dashboard')->group(function () {
 
