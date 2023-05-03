@@ -155,7 +155,7 @@
 
 <body class="antialiased">
 
-    <div class="h-screen w-screen flex">
+    <div class="h-full w-full flex">
         <!-- Sidebar -->
         <div class="w-[350px] h-[1000px]  shadow-2xl ">
             <div class="h-[50px] w-full p-10 flex justify-start items-center">
