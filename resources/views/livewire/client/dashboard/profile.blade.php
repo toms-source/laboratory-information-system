@@ -1,4 +1,4 @@
-<div  class="h-full w-full flex lg:flex-row md:flex-col sm:flex-col xs">
+<div  class="h-screen static w-fit flex lg:flex-row md:flex-col sm:flex-col xs ms-3 mt-3">
    <div id="profile" class="border-r-zinc-100">
         <div class="my-10">
             <img class="rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> 
@@ -10,7 +10,7 @@
 
    <div id="information" class="w-full">
     <div>
-      <div class=" m-5 p-5 drop-shadow-lg bg-white w-full rounded-md"> 
+      <div class=" m-5 p-5 bg-white w-full rounded-md"> 
         <div id="basic_information">
             <div class="text-lg font-bold my-5">Basic Information</div>
             

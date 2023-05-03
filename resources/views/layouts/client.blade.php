@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     @vite(['resources/css/app.css'])
 
     <!-- Livewire Styles -->
@@ -154,7 +154,6 @@
 </head>
 
 <body class="antialiased">
-
     <div class="h-full w-full flex">
         <!-- Sidebar -->
         <div class="w-[350px] h-[1000px]  shadow-2xl ">
@@ -187,32 +186,73 @@
 
         <!-- Main -->
         <!-- Navbar -->
-        <div class="bg-stone-50 w-full">
-            <div class="h-[60px] bg-white drop-shadow-lg p-3 text-xl font-bold flex justify-between items-center p-5">
-                <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer"></i>
-
+        <div class="bg-stone-50 w-full ">
+            <div class="h-[60px] bg-white  drop-shadow-lg p-3 text-xl font-bold flex justify-between items-center">
+                <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer hover:text-sky-500"></i>
                 <div>
-                    <a type="button"
-                        class="flex rounded-full bg-sky-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
-                        id="user-menu-button" aria-expanded="false"xml_error_string aria-haspopup="true"
-                        href="/profile">
-                        <img class="h-8 w-8 rounded-full"
+                    <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
+                        class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white focus:outline-none focus:ring-offset-2 focus:ring-offset-sky-600"
+                        type="button">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 mr-2 rounded-full"
                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="" />
-                    </a>
+                            alt="user photo">
+                        Juan Dela Cruz
+                        <svg class="w-4 h-4 mx-1.5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownAvatarName"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ">
+                        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <div class="font-medium ">Pro User</div>
+                            <div class="truncate">name@flowbite.com</div>
+                        </div>
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownAvatarNameButton">
+                            <li>
+                                <a href="/profile" type="button" id="user-menu-button"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" type="button"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                        </ul>
+                        <div class="py-2">
+                            <livewire:auth.logout-button />
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class=" text-black h-fit p-5 font-bold drop-shadow-xl rounded-lg">
+                {{-- <div>
+                <a type="button"
+                    class="flex rounded-full bg-sky-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+                    id="user-menu-button" aria-expanded="false"xml_error_string aria-haspopup="true"
+                    href="/profile">
+                    <img class="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" />
+                </a>
+            </div> --}}
+            </div>
+            @yield('content')
+            <div class="h-fit absolute bg-sky-500 font-semibold p-1 mb-5 rounded-lg">
                 Dashboard
-                @yield('content')
             </div>
-
         </div>
     </div>
     @vite(['resources/js/app.js'])
     <!-- Livewire Scripts -->
     @livewireScripts
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
 </html>
