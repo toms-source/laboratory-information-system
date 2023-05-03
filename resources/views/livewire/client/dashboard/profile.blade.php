@@ -1,9 +1,9 @@
-<div  class="h-full w-full p-10 flex lg:flex-row md:flex-col sm:flex-col xs">
+<div  class="h-full w-fit flex lg:flex-row md:flex-col sm:flex-col xs">
    <div id="profile" class="border-r-zinc-100">
         <div class="my-10">
             <img class="rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> 
             <div class="m-5">
-                <input type="file" accept="image/*"></input>
+                <input type="file" accept="image/*"/>
             </div>
         </div>
     </div>

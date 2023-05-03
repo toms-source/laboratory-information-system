@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{{ config('app.name', 'Laravel') }}</title>
 
-      <!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-      {{-- Font Awesome --}}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-      @vite(['resources/css/app.css'])
+    {{-- Font Awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <!-- Livewire Styles -->
-      @livewireStyles
-      
+    @vite(['resources/css/app.css'])
 
+    <!-- Livewire Styles -->
+    @livewireStyles
+
+    {{-- 
       <!-- <nav class="bg-gray-800">
    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
      <div class="relative flex h-16 items-center justify-between">
@@ -144,86 +147,72 @@
          </li>
       </ul>
    </div>
-</aside>  -->
+</aside>  --> --}}
 
 
-<div class="h-screen w-screen flex">
-      <!-- Sidebar -->
-      <div class="w-[350px] h-full shadow-2xl ">
-        <div class="h-[50px] w-full p-10 flex justify-start items-center">
-          <div class="py-10 font-bold">
-            <h3 class="font-bold text-xl">
-              <span class="text-sky-500">B&D</span> Laboratories
-            </h3>
-          </div>
+
+</head>
+
+<body class="antialiased">
+
+    <div class="h-screen w-screen flex">
+        <!-- Sidebar -->
+        <div class="w-[350px] h-[1000px]  shadow-2xl ">
+            <div class="h-[50px] w-full p-10 flex justify-start items-center">
+                <div class="py-10 font-bold">
+                    <h3 class="font-bold text-xl">
+                        <span class="text-sky-500">B&D</span> Laboratories
+                    </h3>
+                </div>
+            </div>
+
+            <div class="py-[20px]">
+                <div class="flex flex-col justify-between space-y-[10px] m-2">
+
+                    <a href="/dashboard"
+                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
+                        Dashboard</a>
+                    <a href="#"
+                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
+                        Analytics</a>
+                    <a href="#"
+                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
+                        Health Records</a>
+                </div>
+            </div>
         </div>
 
-        <div class="py-[20px]">
-          <div class="flex flex-col justify-between space-y-[10px] m-2">
-         
-            <a
-              href="/dashboard"
-              class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out"
-            >
-              <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
-              Dashboard</a
-            >
-            <a
-              href="#"
-              class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out"
-            >
-              <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
-              Analytics</a
-            >
-            <a
-              href="#"
-              class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out"
-            >
-              <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
-              Health Records</a
-            >
-          </div>
-        </div>
-      </div>
+        <!-- Main -->
+        <!-- Navbar -->
+        <div class="bg-stone-50 w-full">
+            <div class="h-[60px] bg-white drop-shadow-lg p-3 text-xl font-bold flex justify-between items-center p-5">
+                <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer"></i>
 
-      <!-- Main -->
-      <!-- Navbar -->
-      <div class="bg-stone-50 w-full">
-        <div
-          class="h-[60px] bg-white drop-shadow-lg p-3 text-xl font-bold flex justify-between items-center p-5"
-        >
-          <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer"></i>
+                <div>
+                    <a type="button"
+                        class="flex rounded-full bg-sky-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+                        id="user-menu-button" aria-expanded="false"xml_error_string aria-haspopup="true"
+                        href="/profile">
+                        <img class="h-8 w-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="" />
+                    </a>
+                </div>
+            </div>
 
-          <div>
-            <a
-              type="button"
-              class="flex rounded-full bg-sky-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
-              id="user-menu-button"
-              aria-expanded="false"xml_error_string
-              aria-haspopup="true"
-              href="/profile"
-            >
-              <img
-                class="h-8 w-8 rounded-full"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
+            <div class=" text-black h-fit p-5 font-bold drop-shadow-xl rounded-lg">
+                Dashboard
+                @yield('content')
+            </div>
 
-        <div
-          class="bg-sky-500 text-white h-fit m-5 p-5 font-bold drop-shadow-xl rounded-lg"
-        >
-          Dashboard
         </div>
-      </div>
     </div>
-   </head>
-   <body class="antialiased">
-      @yield('content')
-      @vite(['resources/js/app.js'])
-      <!-- Livewire Scripts -->
-      @livewireScripts
-   </body>
+    @vite(['resources/js/app.js'])
+    <!-- Livewire Scripts -->
+    @livewireScripts
+</body>
+
 </html>
