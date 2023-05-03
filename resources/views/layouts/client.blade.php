@@ -156,7 +156,7 @@
 <body class="antialiased">
     <div class="h-full w-full flex">
         <!-- Sidebar -->
-        <div class="w-[350px] h-[1000px]  shadow-2xl ">
+        <div class="w-[350px] h-[1000px]">
             <div class="h-[50px] w-full p-10 flex justify-start items-center">
                 <div class="py-10 font-bold">
                     <h3 class="font-bold text-xl">
@@ -187,7 +187,7 @@
         <!-- Main -->
         <!-- Navbar -->
         <div class="bg-stone-50 w-full ">
-            <div class="h-[60px] bg-white  drop-shadow-lg p-3 text-xl font-bold flex justify-between items-center">
+            <div class="h-[60px] bg-white  p-3 text-xl font-bold flex justify-between items-center">
                 <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer hover:text-sky-500"></i>
                 <div>
                     <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"

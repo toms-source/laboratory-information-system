@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class client extends Controller
 {
+    
     public function logout()
     {
         auth()->logout();
