@@ -30,16 +30,16 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
 
       //url:port/client/dashboard
       Route::get('/', Home::class)->name('client.home');
-      Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
-      Route::get('/profile', Profile::class)->name('client.profile');
+      // Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
+      // Route::get('/profile', Profile::class)->name('client.profile');
       Route::get('/inbox', Inbox::class)->name('client.inbox'); 
       //Route:get('endpoint', Classname::class)->name('route.name');
    });
 });
 
 
-
-
+Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
+Route::get('/profile', Profile::class)->name('client.profile');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
    Route::prefix('dashboard')->group(function () {
