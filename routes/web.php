@@ -9,6 +9,7 @@ use App\Http\Livewire\Admin\Dashboard\Home as DashboardHome;
 use App\Http\Livewire\Client\Dashboard\Home;
 use App\Http\Livewire\Client\Dashboard\Inbox;
 use App\Http\Livewire\Client\Dashboard\Profile;
+use App\Http\Livewire\Client\Dashboard\Settings;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +35,12 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
       // Route::get('/profile', Profile::class)->name('client.profile');
       Route::get('/inbox', Inbox::class)->name('client.inbox'); 
       //Route:get('endpoint', Classname::class)->name('route.name');
+      Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
+      Route::get('/profile', Profile::class)->name('client.profile');
+      Route::get('/settings', Settings::class)->name('client.settings');
+
    });
 });
-
-
-Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
-Route::get('/profile', Profile::class)->name('client.profile');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
    Route::prefix('dashboard')->group(function () {

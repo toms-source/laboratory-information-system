@@ -201,11 +201,11 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                             aria-labelledby="dropdownAvatarNameButton">
                             <li>
-                                <a href="/profile" type="button" id="user-menu-button"
+                                <a href="{{route('client.profile')}}" type="button" id="user-menu-button"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                             </li>
                             <li>
-                                <a href="#" type="button"
+                                <a href="{{route('client.settings')}}" type="button"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
                             </li>
                         </ul>
@@ -228,9 +228,9 @@
             </div> --}}
             </div>
             @yield('content')
-            <div class="h-fit absolute bg-sky-500 font-semibold p-1 mb-5 rounded-lg">
+            {{-- <div class="h-fit absolute bg-sky-500 font-semibold p-1 mb-5 rounded-lg">
                 Dashboard
-            </div>
+            </div> --}}
         </div>
     </div>
     @vite(['resources/js/app.js'])

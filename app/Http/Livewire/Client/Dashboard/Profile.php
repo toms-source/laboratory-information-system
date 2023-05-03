@@ -7,13 +7,15 @@ use Livewire\Component;
 class Profile extends Component
 {
     public $name;
-    public $email;
     public $contact;
     public $address;
     public $client_id;
-    // public $gender;
-    // public $birthday;
-    
+    public $gender;
+    public $birthday;
+    public $age;
+
+    public $image;
+
     public function render()
     {
         return view('livewire.client.dashboard.profile')->extends('layouts.client');
@@ -21,11 +23,14 @@ class Profile extends Component
     
     public function mount(){
         $this->name = auth()->user()->name;
-        $this->email = auth()->user()->email;
         $this->contact = auth()->user()->contact;
         $this->address = auth()->user()->address;
+        $this->age = auth()->user()->age;
+        $this->gender = auth()->user()->gender;
+        $this->birthday = auth()->user()->birthday;
     }
 
+    
     // public function insert(){
     //     $this->client_id = Auth::user()->id;
     //     $i = 0;

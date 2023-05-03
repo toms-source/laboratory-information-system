@@ -28,6 +28,9 @@ return new class extends Migration
             //Loraine-add: nullable(), providers doesn't have these two
             $table->string('contact')->nullable(); 
             $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('age')->nullable();
+            $table->date('birthday')->nullable();
 
             //add below if there is new information to add
             //the rest should be nullable
