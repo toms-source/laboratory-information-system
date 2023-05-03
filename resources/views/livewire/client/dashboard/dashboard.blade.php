@@ -1,8 +1,5 @@
-{{-- <div>
-    <button class="p-5 bg-red-600" wire:click="logout">
-        Dashboard
-    </button>
-<<<<<<< HEAD
-</div> --}}
+<div class="p-4 sm:ml-64">
+    <h1>THIS is your dashboard</h1>
+</div>
  
 

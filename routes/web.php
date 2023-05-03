@@ -4,6 +4,12 @@ use App\Http\Livewire\Client\Dashboard\Dashboard;
 use App\Http\Livewire\Client\Index;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Livewire\Admin\Dashboard\AdminHome;
+use App\Http\Livewire\Admin\Dashboard\Home as DashboardHome;
+use App\Http\Livewire\Client\Dashboard\Home;
+use App\Http\Livewire\Client\Dashboard\Inbox;
+use App\Http\Livewire\Client\Dashboard\Profile;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +29,19 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
    Route::prefix('dashboard')->group(function () {
 
       //url:port/client/dashboard
-      Route::get('/', Dashboard::class)->name('client.dashboard'); //view dashboard
+      Route::get('/', Home::class)->name('client.home');
+      Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
+      Route::get('/profile', Profile::class)->name('client.profile');
+      Route::get('/inbox', Inbox::class)->name('client.inbox'); 
+      //Route:get('endpoint', Classname::class)->name('route.name');
+   });
+});
 
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+   Route::prefix('dashboard')->group(function () {
+
+      //url:port/client/dashboard
+      Route::get('/', AdminHome::class)->name('admin.dashbaord');
       //Route:get('endpoint', Classname::class)->name('route.name');
    });
 });
