@@ -18,32 +18,32 @@
             <div class="px-10">
                 <div>
                     <label for="name" class="font-medium">Name: </label> 
-                    <span>Juan Dela Cruz</span>
+                    <span>{{$name}}</span>
                 </div>
                 <!-- Date of birth -->
                 <div>
                     <label for="dob" class="font-medium">Date of Birth: </label> 
-                    <span>01/17/2003</span>
+                    <span></span>
                 </div>
                 <!-- Address -->
                 <div>
                     <label for="address" class="font-medium">Address: </label> 
-                    <span>San Juan, Metro Manila</span>
+                    <span>{{$address}}</span>
                 </div>
                 <!-- Age -->
                 <div>
                     <label for="age" class="font-medium">Age: </label> 
-                    <span>20</span>
+                    <span></span>
                 </div>
                 <!-- Gender -->
                 <div>
                     <label for="gender" class="font-medium">Gender: </label> 
-                    <span>Male</span>
+                    <span></span>
                 </div>
                 <!-- Contact -->
                 <div>
                     <label for="contact" class="font-medium">Contact: </label> 
-                    <span>+63 9416 487 155</span>
+                    <span>{{$contact}}</span>
                 </div>
             </div>
         </div> 
