@@ -14,12 +14,12 @@ class Settings extends Component
     public $gender;
     public $birthday;
 
-    protected $rules = [
-        'name' => 'required|min:6',
-        'address' => 'required|min:6',
-        'contact' => 'required|min:9',
-        'age' => 'min:3',
-    ];
+    // protected $rules = [
+    //     'name' => 'required|min:6',
+    //     'address' => 'required|min:6',
+    //     'contact' => 'required|min:9',
+    //     'age' => 'min:3',
+    // ];
 
     public function mount()
     {
@@ -34,7 +34,7 @@ class Settings extends Component
 
     public function updateSettings()
     {
-        $this->validate();
+       // $this->validate();
 
         $this->client_id = auth()->user()->id;
         $i = 0;
@@ -50,10 +50,10 @@ class Settings extends Component
 
         session()->flash('success', 'Update successfully!');
     }
-    public function updated($property)
-    {
-        $this->validateOnly($property);
-    }
+    // public function updated($property)
+    // {
+    //     $this->validateOnly($property);
+    // }
 
     public function hide()
     {
