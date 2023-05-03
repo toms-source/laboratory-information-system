@@ -24,6 +24,9 @@ class User extends Authenticatable
         'password',
         'address',
         'contact',
+        'birthday',
+        'gender',
+        'age',
 
         //Loraine-Add
         'provider',
@@ -48,5 +51,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthday' => 'date:d-m-Y',
     ];
+
+    public function emergencyContacts()
+    {
+        return $this->hasMany(EmergencyContacts::class);
+    }
 }
