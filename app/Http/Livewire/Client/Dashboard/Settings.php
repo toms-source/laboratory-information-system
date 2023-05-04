@@ -59,18 +59,10 @@ class Settings extends Component
         //dd($this->em_contacts[] = auth()->user()->emergencyContacts);
     }
 
-    public function updateSettings()
-<<<<<<< HEAD
-    {
-       // $this->validate();
-=======
-    {   
-        $this->validate();
-<<<<<<< HEAD
-=======
->>>>>>> 2c9fe0b1f565580112f2087e6281d86b52f66089
+    public function updateSettings(){
 
->>>>>>> 2c51a8c5c7a41824f21ef089cc6881a5fbe9c9c1
+        $this->validate();
+
         $this->user->update([
             'name' => $this->name,
             'address'=> $this->address,
@@ -141,12 +133,12 @@ class Settings extends Component
 
         session()->flash('success', 'Update successfully!');
     }
-<<<<<<< HEAD
+
     // public function updated($property)
     // {
     //     $this->validateOnly($property);
     // }
-=======
+
 
     public function addContact()
     {
@@ -158,7 +150,6 @@ class Settings extends Component
     {
         $this->validateOnly($property);
     }
->>>>>>> 2c9fe0b1f565580112f2087e6281d86b52f66089
 
     
     public function hide()
