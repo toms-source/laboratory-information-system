@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Client\Dashboard;
 use App\Models\User;
 use Livewire\Component;
 use App\Models\EmergencyContacts;
+use Carbon\Carbon;
 
 class Settings extends Component
 {
@@ -22,13 +23,14 @@ class Settings extends Component
     public $age;
     public $gender;
     public $birthday;
+    public $date;
 
     public $em_contacts = [];
 
     protected $rules = [
         'name' => 'required|min:6',
         'address' => 'required|min:6',
-        'contact' => 'required|min:9',
+        'contact' => 'required|min:11',
         'age' => 'integer',
     ];
 
@@ -40,20 +42,19 @@ class Settings extends Component
         $this->contact = $this->user->contact;
         $this->address =$this->user->address;
         $this->age = $this->user->age;
-        $this->gender = $this->user->gender;
-        $this->birthday = date('d-m-Y', strtotime($this->user->birthday));
-        // dd($this->name);
+        $this->gender = $this->user->gender;        
+        $this->birthday = date('Y-m-d', strtotime($this->user->birthday));
+        
 
-        foreach ($this->user->emergencyContacts as $contact) {
-            $this->em_contacts[] = $contact;
-        }
+        // foreach ($this->user->emergencyContacts as $contact) {
+        //     $this->em_contacts[] = $contact;
+        // }
         //dd($this->em_contacts[] = auth()->user()->emergencyContacts);
     }
 
     public function updateSettings()
     {   
         $this->validate();
-
         $this->user->update([
             'name' => $this->name,
             'address'=> $this->address,

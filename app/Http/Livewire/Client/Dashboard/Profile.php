@@ -27,7 +27,7 @@ class Profile extends Component
         $this->address = auth()->user()->address;
         $this->age = auth()->user()->age;
         $this->gender = auth()->user()->gender;
-        $this->birthday = auth()->user()->birthday;
+        $this->birthday = date('M-d-Y', strtotime(auth()->user()->birthday));
     }
 
     
