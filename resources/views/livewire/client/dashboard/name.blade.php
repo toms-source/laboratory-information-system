@@ -7,6 +7,7 @@
         <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/images/' . auth()->user()->image) }}" width="250"
             alt="">
     {{-- Preview Default Picture --}}
+    {{-- fordapush --}}
     @elseif(auth()->user()->image)
         <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/' . auth()->user()->image) }}" width="250"
         alt="">
