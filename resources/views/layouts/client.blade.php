@@ -157,29 +157,49 @@
     <div class="h-full w-full flex">
         <!-- Sidebar -->
         <div class="w-[350px] h-[1000px]">
-            <div class="h-[50px] w-full p-10 flex justify-start items-center">
+        <div class="h-[50px] w-full p-10 flex justify-start items-center">
                 <div class="py-10 font-bold">
-                    <h3 class="font-bold text-xl">
-                        <span class="text-sky-500">B&D</span> Laboratories
+                    <h3 class="font-medium text-xl">
+                        <span class="text-sky-500 font-bold">B&D</span> Laboratories
                     </h3>
                 </div>
             </div>
 
+
             <div class="py-[20px]">
                 <div class="flex flex-col justify-between space-y-[10px] m-2">
 
-                    <a href="/dashboard"
-                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
-                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
+                <a href="/client/dashboard"
+                        class="inline-flex relative items-center p-2 w-full text-base font-medium border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                        </svg> &nbsp;                        
                         Dashboard</a>
                     <a href="#"
-                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
-                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
-                        Analytics</a>
-                    <a href="#"
-                        class="inline-flex relative items-center p-[15px] w-full text-base font-bold border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
-                        <i class="fa-sharp fa-solid fa-clipboard pr-3"></i>
+                        class="inline-flex relative items-center p-2 w-full text-base font-medium border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                        </svg>                         &nbsp;               
+                        Announcement</a>
+                    <a href="/client/dashboard/healthrecords"
+                        class="inline-flex relative items-center p-2 w-full text-base font-medium border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg> &nbsp;                        
                         Health Records</a>
+                      <a href="#"
+                        class="inline-flex relative items-center p-2 w-full text-base font-medium border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" />
+                        </svg>&nbsp;                        
+                        Promotions</a>
+                      <a href="#"
+                        class="inline-flex relative items-center p-2 w-full text-base font-medium border-sky-500 hover:bg-sky-500 hover:text-white hover:rounded-lg rounded-lg transition duration-400 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                        </svg>
+                        &nbsp;                        
+                        Subscriptions</a>
                 </div>
             </div>
         </div>
@@ -188,8 +208,9 @@
         <!-- Navbar -->
         <div class="bg-stone-50 w-full ">
             <div class="h-[60px] bg-white  p-3 text-xl font-bold flex justify-between items-center">
-                <i class="fa-sharp fa-solid fa-bars text-lg cursor-pointer hover:text-sky-500"></i>
-                <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-sky-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>                <div>
                     <livewire:client.dashboard.name/>
                     <!-- Dropdown menu -->
                     <div id="dropdownAvatarName"
@@ -228,6 +249,7 @@
             </div> --}}
             </div>
             @yield('content')
+            
             {{-- <div class="h-fit absolute bg-sky-500 font-semibold p-1 mb-5 rounded-lg">
                 Dashboard
             </div> --}}

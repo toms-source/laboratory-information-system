@@ -25,6 +25,9 @@ class Settings extends Component
     public $birthday;
     public $date;
 
+    //Medical Background
+    public $mbName, $mbRelationship, $mbAddress, $mbContact;
+
     // protected $rules = [
     //     'name' => 'required|min:6',
     //     'address' => 'required|min:6',

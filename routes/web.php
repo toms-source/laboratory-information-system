@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Livewire\Admin\Dashboard\AdminHome;
 use App\Http\Livewire\Admin\Dashboard\Home as DashboardHome;
+use App\Http\Livewire\Client\Dashboard\HealthRecords;
 use App\Http\Livewire\Client\Dashboard\Home;
 use App\Http\Livewire\Client\Dashboard\Inbox;
 use App\Http\Livewire\Client\Dashboard\Profile;
@@ -38,7 +39,7 @@ Route::prefix('client')->middleware(['auth'])->group(function () {
       Route::get('/dashboard', Dashboard::class)->name('client.dashboard'); 
       Route::get('/profile', Profile::class)->name('client.profile');
       Route::get('/settings', Settings::class)->name('client.settings');
-
+      Route::get('/healthrecords', HealthRecords::class)->name('client.health-records');
    });
 });
 

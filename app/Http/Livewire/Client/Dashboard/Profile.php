@@ -2,10 +2,14 @@
 
 namespace App\Http\Livewire\Client\Dashboard;
 
+use Illuminate\Support\Facades\File;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Profile extends Component
 {
+    use WithFileUploads;
+
     public $name;
     public $contact;
     public $address;
@@ -13,6 +17,7 @@ class Profile extends Component
     public $gender;
     public $birthday;
     public $age;
+    public $user;
 
     public $image;
 
@@ -30,17 +35,42 @@ class Profile extends Component
         $this->birthday = date('M-d-Y', strtotime(auth()->user()->birthday));
     }
 
-    
-    // public function insert(){
-    //     $this->client_id = Auth::user()->id;
-    //     $i = 0;
-    //     $i = $this->client_id;
-    //     User::find($i)->update([
-    //         'name' => $this->name,
-    //         'email' => $this->email,
-    //         'address'=> $this->address,
-    //         'contact'=> $this->contact
-    //    ]);
-    // }
+    public function uploadImage(){
+        $this->validate([
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // 2MB Max
+        ]);
 
+        //check muna kung may laman si image variable//
+        if($this->image)
+        {
+            if(File::exists(public_path('storage/'.auth()->user()->image))){
+                File::delete(public_path('storage/'.auth()->user()->image));
+            }
+
+            $filepath = $this->image->store('users/uploads', 'public'); //set sa public disk
+
+            //dagdag validation
+            if($filepath)
+            {
+                auth()->user()->image = $filepath;
+                auth()->user()->save();
+            } else
+            {
+                $this->addError('image', 'Weird!');
+            }
+            //pasa yung filepath sa auth()->user->image
+            
+            session()->flash('success', 'Image successfully uploaded!');
+        } else {
+            //custom validation incase nagawa ni user mag drag n drop tas nag upload ng docs, pdf, etc.
+            $this->addError('image', 'Image is not valid');
+        }
+    }
+
+    public function hide()
+    {
+        session()->forget('success');
+    }
+
+    
 }

@@ -27,6 +27,7 @@ class User extends Authenticatable
         'birthday',
         'gender',
         'age',
+        'image',
 
         //Loraine-Add
         'provider',
@@ -58,4 +59,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(EmergencyContacts::class);
     }
+
+    public function medicalBackground()
+    {
+        return $this->hasMany(MedicalBackground::class);
+    }
+
 }

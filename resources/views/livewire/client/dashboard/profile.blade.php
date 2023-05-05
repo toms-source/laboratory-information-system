@@ -1,11 +1,22 @@
 <div  class="h-screen w-fit flex lg:flex-row md:flex-col sm:flex-col xs ms-10 mt-3">
    <div id="profile" class="border-r-zinc-100">
-        <div class="my-10">
-            <img class="rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> 
-            <div class="m-5">
-                <input type="file" accept="image/*"/>
+   @if (session()->has('success'))
+        <div class="w-full px-10">
+            <div wire:poll="hide" class="border rounded p-5 bg-sky-500 border-blue-200" role="alert">
+                {{ session('success') }}
             </div>
-            {{-- <button wire:click.prevent="uploadImage" class="bg-sky-400 hover:bg-sky-500 py-1 text-sm px-1 rounded-md">Upload</button> --}}
+        </div>
+    @endif
+        <div class="my-10">
+            @if($image)
+                <img class="rounded" src="{{ $image->temporaryUrl() }}" width="250" alt="">
+            @elseif(auth()->user()->image)
+                <img class="rounded" src="{{ asset('storage/'.auth()->user()->image) }}" width="250" alt="">
+            @endif
+            <div class="m-5">
+                <input type="file" id="image" wire:model.debounce.500ms="image" accept="image/*" />
+            </div>
+            <button wire:click.prevent="uploadImage" class="bg-sky-400 hover:bg-sky-500 py-1 text-sm px-1 rounded-md">Upload</button>
         </div>
     </div>
 
@@ -98,7 +109,7 @@
         </div> 
         <div class="btn pt-5 flex w-full justify-end gap-2">
         {{-- <button class="bg-red-400 hover:bg-red-500 py-2 px-5 rounded-md font-medium">Cancel</button> --}}
-        <a href="{{route('client.settings')}}"  type="button" class="bg-sky-400 hover:bg-sky-500 py-2 px-4 rounded-md">Edit</a>
+        <a href="{{route('client.settings')}}"  type="button" class="bg-sky-500 hover:bg-sky-300 py-2 px-4 rounded-md text-white font-semibold">Edit</a>
        </div> 
        <div>
     </div>

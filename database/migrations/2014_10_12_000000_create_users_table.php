@@ -31,6 +31,8 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('age')->nullable();
             $table->date('birthday')->nullable();
+            $table->string('image')->nullable();
+
 
             //add below if there is new information to add
             //the rest should be nullable
