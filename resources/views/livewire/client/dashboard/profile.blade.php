@@ -8,10 +8,12 @@
         </div>
     @endif
         <div class="my-10">
-            @if($image)
-                <img class="rounded" src="{{ $image->temporaryUrl() }}" width="250" alt="">
+            {{-- @if($image)
+                <img class="rounded" src="{{ $image->temporaryUrl() }}" width="250" alt="">  else--}}
+            @if(auth()->user()->image)
+                <img class="rounded" src="{{ asset('storage/images/'.auth()->user()->image) }}" width="250" alt="">
             @elseif(auth()->user()->image)
-                <img class="rounded" src="{{ asset('storage/'.auth()->user()->image) }}" width="250" alt="">
+            <img class="rounded" src="{{ asset('storage/'.auth()->user()->image) }}" width="250" alt="">
             @endif
             <div class="m-5">
                 <input type="file" id="image" wire:model.debounce.500ms="image" accept="image/*" />
