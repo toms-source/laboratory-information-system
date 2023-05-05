@@ -2,12 +2,16 @@
     class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white focus:outline-none focus:ring-offset-2 focus:ring-offset-sky-600"
     type="button">
     <span class="sr-only">Open user menu</span>
-    {{-- <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/' . auth()->user()->image) }}  " alt="user photo"> --}}
-    @if (auth()->user()->image)
-        <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/images/' . auth()->user()->image) }}" width="250" alt="">
+    @if (auth()->user()->image == 'default.jpg')
+    {{-- Preview Default Picture --}}
+        <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/images/' . auth()->user()->image) }}" width="250"
+            alt="">
+    {{-- Preview Default Picture --}}
     @elseif(auth()->user()->image)
-        <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/' . auth()->user()->image) }}" width="250" alt="">
+        <img class="w-8 h-8 mr-2 rounded-full" src="{{ asset('storage/' . auth()->user()->image) }}" width="250"
+        alt="">
     @endif
+
     {{ $name }}
     <svg class="w-4 h-4 mx-1.5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg">
