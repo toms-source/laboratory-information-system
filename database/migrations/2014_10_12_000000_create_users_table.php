@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->enum('role', ['admin', 'client'])->default('client');
+            $table->enum('role', ['ADMIN', 'CLIENT'])->default('CLIENT');
 
             //Loraine-Add-For-Socialitee
             $table->string('provider')->nullable();

@@ -18,6 +18,7 @@ class Profile extends Component
     public $birthday;
     public $age;
     public $user;
+    public $show = false;
 
     public $image;
 
@@ -65,6 +66,11 @@ class Profile extends Component
             //custom validation incase nagawa ni user mag drag n drop tas nag upload ng docs, pdf, etc.
             $this->addError('image', 'Image is not valid');
         }
+        $this->show = false;
+    }
+
+    public function showFileUpload(){
+        $this->show = true;
     }
 
     public function hide()

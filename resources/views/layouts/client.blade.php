@@ -213,27 +213,7 @@
               </svg>                <div>
                     <livewire:client.dashboard.name/>
                     <!-- Dropdown menu -->
-                    <div id="dropdownAvatarName"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ">
-                        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                            <div class="font-medium ">Pro User</div>
-                            <div class="truncate">name@flowbite.com</div>
-                        </div>
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownAvatarNameButton">
-                            <li>
-                                <a href="{{route('client.profile')}}" type="button" id="user-menu-button"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
-                            </li>
-                            <li>
-                                <a href="{{route('client.settings')}}" type="button"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                        </ul>
-                        <div class="py-2">
-                            <livewire:auth.logout-button />
-                        </div>
-                    </div>
+        
 
                 </div>
 

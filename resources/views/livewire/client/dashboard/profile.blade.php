@@ -9,6 +9,7 @@
             </div>
         @endif
         <div class="my-10">
+        
             @if ($image)
                 <img class="rounded" src="{{ $image->temporaryUrl() }}" width="250" alt="">
             @elseif(auth()->user()->image)
@@ -20,11 +21,19 @@
                 @endif 
                 {{-- Preview Default Picture --}}
             @endif
-            <div class="m-5">
-                <input type="file" id="image" wire:model="image" accept="image/*" />
-            </div>
+            @if(!$show)
             <button 
-                class="bg-sky-400 hover:bg-sky-500 py-1 text-sm px-1 rounded-md">Upload</button>
+                class="bg-sky-400 hover:bg-sky-500 py-1 text-sm px-1 rounded-md"
+                wire:click.prevent="showFileUpload">Edit</button>
+            @endif
+            <div class="m-5">
+                @if($show)
+                <input type="file" id="image" wire:model="image" accept="image/*" />
+                <button 
+                class="bg-sky-400 hover:bg-sky-500 py-1 text-sm px-1 rounded-md mt-3">Upload</button>
+                @endif
+            </div>
+            
         </div>
     </div>
 
