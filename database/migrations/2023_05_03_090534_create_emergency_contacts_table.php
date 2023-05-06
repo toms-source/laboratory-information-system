@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('emergency_contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->string('name');
-            $table->string('relationship');
-            $table->string('address');
-            $table->string('contact');
+            //$table->foreignId('user_id')->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->constrained()->onDelete('cascade');
+            $table->string('name')->nullable();
+            $table->string('relationship')->nullable();
+            $table->string('address')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('email')->nullable();
+            $table->date('birthday')->nullable();
+            $table->string('age')->nullable();
             $table->timestamps();
         });
     }

@@ -10,10 +10,14 @@ class EmergencyContacts extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'name',
         'relationship',
         'address',
         'contact',
+        'email',
+        'birthday',
+        'age',
     ];
 
     public function user()

@@ -135,6 +135,7 @@ class Settings extends Component
         // }
 
         session()->flash('success', 'Update successfully!');
+        return redirect()->route('client.profile');
     }
 
     // public function updated($property)
@@ -143,11 +144,6 @@ class Settings extends Component
     // }
 
 
-    public function addContact()
-    {
-        //or  $this->em_contacts[] = auth()->user()->emergencyContacts;
-        $this->em_contacts[] = new EmergencyContacts();
-    }
 
     public function updated($property)
     {
